@@ -55,3 +55,51 @@ button{
     border-radius:8px;
     cursor:pointer;
 }
+
+.hero{
+
+padding:120px 20px;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+max-width:700px;
+
+margin:auto;
+
+color:#555;
+
+line-height:35px;
+
+}
+
+.hero-buttons{
+
+margin-top:40px;
+
+}
+
+.secondary-btn{
+
+background:white;
+
+color:black;
+
+border:2px solid black;
+
+margin-left:15px;
+
+}
