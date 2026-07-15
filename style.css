@@ -1,0 +1,30 @@
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+header{
+    background:black;
+    color:white;
+    padding:20px;
+}
+
+nav a{
+    color:white;
+    margin-right:20px;
+    text-decoration:none;
+}
+
+section{
+    text-align:center;
+    padding:80px;
+}
+
+button{
+    background:black;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+}
