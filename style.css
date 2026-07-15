@@ -4,16 +4,43 @@ body{
 }
 
 header{
-    background:black;
-    color:white;
-    padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:black;
+color:white;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
 }
 
 nav a{
-    color:white;
-    margin-right:20px;
-    text-decoration:none;
+color:white;
+text-decoration:none;
+margin:20px;
+font-size:18px;
 }
+
+.login-btn{
+
+background:white;
+color:black;
+
+padding:12px 22px;
+
+border:none;
+
+border-radius:8px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
 
 section{
     text-align:center;
