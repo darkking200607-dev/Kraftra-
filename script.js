@@ -1,26 +1,29 @@
-// Welcome Message
-console.log("Welcome to Kraftra 🚀");
+// =========================
+// KRAFTRA v2.0
+// =========================
 
-// Smooth Button Animation
-const buttons = document.querySelectorAll("button");
+// Navbar Shadow
 
-buttons.forEach(button => {
+const header = document.querySelector("header");
 
-button.addEventListener("mouseenter", () => {
+window.addEventListener("scroll", () => {
 
-button.style.transform = "scale(1.08)";
+if(window.scrollY > 20){
+
+header.style.boxShadow = "0 10px 30px rgba(0,0,0,.15)";
+
+}else{
+
+header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
+
+}
 
 });
 
-button.addEventListener("mouseleave", () => {
 
-button.style.transform = "scale(1)";
+// Fade Animation
 
-});
-
-});
-
-// Fade In Sections
+const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver((entries)=>{
 
@@ -28,7 +31,9 @@ entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.classList.add("show");
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
 
 }
 
@@ -36,26 +41,89 @@ entry.target.classList.add("show");
 
 });
 
-document.querySelectorAll("section").forEach(section=>{
+sections.forEach(section=>{
+
+section.style.opacity="0";
+
+section.style.transform="translateY(60px)";
+
+section.style.transition="1s";
 
 observer.observe(section);
 
 });
 
-// Navbar Shadow
+
+// Button Hover Animation
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button=>{
+
+button.addEventListener("mouseenter",()=>{
+
+button.style.transform="translateY(-5px) scale(1.03)";
+
+});
+
+button.addEventListener("mouseleave",()=>{
+
+button.style.transform="translateY(0) scale(1)";
+
+});
+
+});
+
+
+// Counter Animation
+
+const counters = document.querySelectorAll(".stat h2");
+
+let started = false;
 
 window.addEventListener("scroll",()=>{
 
-const header=document.querySelector("header");
+const stats = document.querySelector(".stats");
 
-if(window.scrollY>50){
+if(!stats) return;
 
-header.style.boxShadow="0 8px 25px rgba(0,0,0,.2)";
+const top = stats.offsetTop - 350;
 
-}else{
+if(window.scrollY > top && !started){
 
-header.style.boxShadow="none";
+started = true;
+
+counters[0].innerHTML="10K+";
+counters[1].innerHTML="5K+";
+counters[2].innerHTML="50K+";
+counters[3].innerHTML="4.9★";
 
 }
 
 });
+
+
+// Logo Click
+
+const logo = document.querySelector(".logo");
+
+if(logo){
+
+logo.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+}
+
+
+// Welcome
+
+console.log("🚀 Welcome to Kraftra v2.0");
