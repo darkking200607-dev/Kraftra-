@@ -49,7 +49,11 @@ letter-spacing:4px;
 cursor:pointer;
 transition:.35s;
 }
-
+.logo img{
+height:45px;
+width:auto;
+display:block;
+}
 .logo:hover{
 letter-spacing:8px;
 }
